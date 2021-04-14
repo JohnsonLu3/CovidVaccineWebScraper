@@ -23,9 +23,9 @@ class Cvs {
       const { city, state, status } = row
       if (cities.includes(city))
         if (status === 'Fully Booked') {
-          console.log(`${city} is ${FgRed}${status}${Reset}`)
+          console.log(`\t${city} is ${FgRed}${status}${Reset}`)
         } else {
-          console.log(`${city} is ${FgGreen}${status}${Reset}`)
+          console.log(`\t${city} is ${FgGreen}${status}${Reset}`)
         }
     });
   }
@@ -35,7 +35,7 @@ class Cvs {
     details.NY.forEach(row => {
       const { city, state, status } = row
       if (status != 'Fully Booked') {
-        console.log(FgGreen, `${city} is ${status}`)
+        console.log(FgGreen, `\t${city} is ${status}${Reset}`)
       }
     });
   }
